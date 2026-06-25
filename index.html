@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClasifAI – Dashboard de Leads</title>
+    <meta name="description" content="Dashboard inteligente de clasificación de leads con IA">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-title">
+                <h1>ClasifAI</h1>
+                <span class="badge-live">LIVE</span>
+            </div>
+            <p>Clasificación inteligente de leads</p>
+        </header>
+
+        <!-- etsadisticas -->
+        <section class="estadisticas" aria-label="Estadísticas">
+            <div class="card">
+                <p class="card-label">Total Leads</p>
+                <span id="totalLeads" class="card-value">–</span>
+            </div>
+            <div class="card card-accent">
+                <p class="card-label">Prioridad Alta</p>
+                <span id="altaLeads" class="card-value">–</span>
+            </div>
+            <div class="card">
+                <p class="card-label">En proceso</p>
+                <span id="procesoLeads" class="card-value">–</span>
+            </div>
+            <div class="card">
+                <p class="card-label">Completados</p>
+                <span id="completadosLeads" class="card-value">–</span>
+            </div>
+        </section>
+
+        <!-- Tabla de leads activos -->
+        <section class="tabla-section">
+            <div class="tabla-header">
+                <h2>Leads activos</h2>
+                <input type="text" id="searchInput" class="search-input"
+                    placeholder="Buscar por nombre, empresa o email…" aria-label="Buscar leads">
+            </div>
+
+            <div class="tabla-wrapper">
+                <table aria-label="Tabla de leads">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Empresa</th>
+                            <th>Categoría</th>
+                            <th>Prioridad</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaLeads"></tbody>
+                </table>
+                <div id="emptyState" class="empty-state" style="display:none">No se encontraron leads.</div>
+                <div id="loadingState" class="loading-state">Cargando datos…</div>
+                <div id="errorState" class="error-state" style="display:none">Error al cargar los datos. Revisa la
+                    consola.</div>
+            </div>
+        </section>
+
+        <!-- Tabla de completados -->
+        <section class="tabla-section tabla-completados" id="seccionCompletados" style="display:none">
+            <div class="tabla-header">
+                <h2>Completados</h2>
+            </div>
+            <div class="tabla-wrapper">
+                <table aria-label="Tabla de leads completados">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Empresa</th>
+                            <th>Categoría</th>
+                            <th>Prioridad</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaCompletados"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Análisis -->
+        <section class="analisis-section" id="analisisSection" style="display:none">
+            <h2>Análisis</h2>
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Leads por categoría</h3>
+                    <div class="chart-container">
+                        <canvas id="chartCategorias"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Leads por estado</h3>
+                    <div class="chart-container">
+                        <canvas id="chartEstados"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

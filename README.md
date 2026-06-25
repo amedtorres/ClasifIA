@@ -8,14 +8,6 @@
   El sistema gestiona solicitudes mediante formularios y utiliza Inteligencia Artificial para analizar, clasificar y resumir según su importancia.
   Toda esta información se almacena en una base de datos PostgreSQL, permitiendo visualizar y gestionar los clientes potenciales en tiempo real a través de un dashboard web.
 </p>
-<p align="center">
-<img src="https://img.shields.io/badge/Make-Automatización-blue?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Supabase-PostgreSQL-green?style=for-the-badge" />
-<img src="https://img.shields.io/badge/PostgreSQL-Database-blue?style=for-the-badge" />
-<img src="https://img.shields.io/badge/JavaScript-Frontend-yellow?style=for-the-badge" />
-<img src="https://img.shields.io/badge/HTML5-CSS3-orange?style=for-the-badge" />
-<img src="https://img.shields.io/badge/AI-Make%20AI%20Agent-purple?style=for-the-badge" />
-</p>
 
 
 ## Objetivos del proyecto
@@ -45,8 +37,8 @@ Google Forms ➔ Make ➔ Make AI Agent ➔ JSON Parser ➔ Supabase (PostgreSQL
 
 ## Capturas
 
-### Dashboard
-![Dashboard](imagenes/captura-dashboard.png)
+### Dashboard                                   
+![Dashboard](imagenes/captura-dashboard.png)     
 
 ### Flujo de Make
 ![Flujo de Make](imagenes/captura-make.png)

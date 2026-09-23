@@ -7,8 +7,8 @@
             "version": 2,
             "parameters": {
                 "limit": 2,
-                "formId": "1bZS1QwMv3eyO2MnDaMcheRrKpR3oxrTfZysUHhDQh8M",
-                "__IMTCONN__": 8343855
+                "formId": "TU_ID_DEL_FORMULARIO",
+                "__IMTCONN__": ID_CONEXION_GOOGLE
             },
             "mapper": {},
             "metadata": {
@@ -22,7 +22,7 @@
                         "formId": {
                             "rpcSearch": {
                                 "label": "ClasifAI",
-                                "value": "1bZS1QwMv3eyO2MnDaMcheRrKpR3oxrTfZysUHhDQh8M"
+                                "value": "TU_ID_DEL_FORMULARIO"
                             }
                         },
                         "__IMTCONN__": {
@@ -810,7 +810,7 @@
             "module": "supabase:createARow",
             "version": 1,
             "parameters": {
-                "__IMTCONN__": 8345818
+                "__IMTCONN__": ID_CONEXION_SUPABASE
             },
             "mapper": {
                 "email": "{{1.answers.`3e555b2b`.textAnswers.answers[].value}}",
